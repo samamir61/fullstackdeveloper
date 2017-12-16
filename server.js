@@ -21,14 +21,16 @@ app.use('api/*',req=>{
 app.post('/api/login', function (req, res) {
 
     if(req.body && req.body.email && req.body.password){
+        console.log(req.body.password)
+         let pass = window.btoa(req.body.password)
         if(req.body.email == '123@123.123'){
-
-            if(req.body.password == '123123') {
+            if(pass == 'MTIzMTIz') {  
                 var user ={
                     name:"Alex Jones"
                     , email:req.body.email
                     , password:req.body.password
                     , profilePic:"http://lorempixel.com/500/500/people/"
+                    , accesstokken : "123ggw"
                 };
                 res.send(200, user);
             }

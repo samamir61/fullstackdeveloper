@@ -16,6 +16,15 @@ This is a list of recommendations to make this project better
 
 *login page
 
-1- welcoming message should be at the head of the page 
-2-
+1- moved user's name to the top 
+2-modified the image and made it in the middle of the page
+3- added logout button 
+4- moved change password to be alongside the logout button
+5- since we are making login, its not secure to check the password as it is, i assumed we are using base 64 encoding
+(which is not the nest solution to encrypt password but as you asked am not using a hashing library) to save the password in the DB,
+ and checked the password if it match the encrypted password.
+6- we need to generate a user access tokken from server side to check if the login is authinticated, and save in the local storage, 
+when logout i clear it from the memory 
+
+
 
